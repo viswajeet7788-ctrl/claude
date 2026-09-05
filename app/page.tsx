@@ -1,5 +1,5 @@
-import { AuthenticatedAgentChat } from "./_components/authenticated-agent-chat";
+import { TravelHome } from "@/components/travel/travel-home";
 
 export default function Page() {
-  return <AuthenticatedAgentChat />;
+  return <TravelHome />;
 }

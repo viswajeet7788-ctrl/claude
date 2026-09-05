@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Sora } from "next/font/google";
 import type { ReactNode } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -19,16 +19,46 @@ const mono = Geist_Mono({
   display: "swap",
 });
 
+const display = Sora({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "claude",
-  description: "A Next.js starter for eve agents with AI Elements.",
+  title: "Wander — Discover Your Next Trip",
+  description:
+    "Discover breathtaking destinations around the world. Search countries, browse recommended and popular places, and save your favorites.",
 };
 
-// The page and Eve routes validate the generated app's Better Auth session.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fbf7f0" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1c22" },
+  ],
+};
+
+const themeInitScript = `
+(function() {
+  try {
+    var stored = localStorage.getItem('wander-theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({ children }: { readonly children: ReactNode }) {
   return (
-    <html className={cn(sans.variable, mono.variable)} lang="en">
-      <body>
+    <html
+      className={cn(sans.variable, mono.variable, display.variable, "bg-background")}
+      lang="en"
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="font-sans antialiased">
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
