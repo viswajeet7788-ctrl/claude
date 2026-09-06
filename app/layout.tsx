@@ -26,15 +26,15 @@ const display = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Wander — Discover Your Next Trip",
+  title: "Odyssey — Your AI Travel Operating System",
   description:
-    "Discover breathtaking destinations around the world. Search countries, browse recommended and popular places, and save your favorites.",
+    "An AI-native travel companion that unifies discovery, planning, an interactive treasure map, budgeting, visas, bookings and a personal AI assistant into one cinematic dashboard.",
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fbf7f0" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1c22" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f4ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1420" },
   ],
 };
 

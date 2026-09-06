@@ -19,7 +19,11 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
   --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -33,48 +37,63 @@
 
 :root {
   color-scheme: light;
-  /* Warm, airy travel palette: soft neutral page, white surfaces, coral accent. */
-  --background: oklch(0.985 0.005 80);
-  --foreground: oklch(0.22 0.02 260);
+  /* Luxe futuristic light: ivory canvas, deep navy ink, warm gold, electric cyan */
+  --background: oklch(0.98 0.008 85);
+  --foreground: oklch(0.24 0.03 265);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.02 260);
+  --card-foreground: oklch(0.24 0.03 265);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.02 260);
-  --primary: oklch(0.66 0.17 42);
-  --primary-foreground: oklch(0.99 0.01 80);
-  --secondary: oklch(0.955 0.01 80);
-  --secondary-foreground: oklch(0.28 0.02 260);
-  --muted: oklch(0.955 0.008 80);
-  --muted-foreground: oklch(0.52 0.02 260);
-  --accent: oklch(0.95 0.03 55);
-  --accent-foreground: oklch(0.3 0.05 45);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.905 0.008 80);
-  --input: oklch(0.905 0.008 80);
-  --ring: oklch(0.66 0.17 42);
-  --radius: 1rem;
+  --popover-foreground: oklch(0.24 0.03 265);
+  --primary: oklch(0.72 0.13 78);
+  --primary-foreground: oklch(0.22 0.03 265);
+  --secondary: oklch(0.955 0.012 85);
+  --secondary-foreground: oklch(0.3 0.03 265);
+  --muted: oklch(0.955 0.01 85);
+  --muted-foreground: oklch(0.52 0.02 265);
+  --accent: oklch(0.6 0.13 235);
+  --accent-foreground: oklch(0.99 0.01 235);
+  --brand: oklch(0.55 0.14 245);
+  --brand-foreground: oklch(0.99 0.01 245);
+  --destructive: oklch(0.58 0.23 27);
+  --success: oklch(0.62 0.16 155);
+  --warning: oklch(0.75 0.15 75);
+  --border: oklch(0.9 0.01 85);
+  --input: oklch(0.9 0.01 85);
+  --ring: oklch(0.72 0.13 78);
+  --radius: 1.1rem;
+  --glass-bg: oklch(1 0 0 / 70%);
+  --glass-border: oklch(0.5 0.03 265 / 12%);
+  --grid-line: oklch(0.5 0.05 260 / 8%);
 }
 
 .dark {
   color-scheme: dark;
-  --background: oklch(0.17 0.015 262);
-  --foreground: oklch(0.96 0.005 80);
-  --card: oklch(0.215 0.017 262);
-  --card-foreground: oklch(0.96 0.005 80);
-  --popover: oklch(0.215 0.017 262);
-  --popover-foreground: oklch(0.96 0.005 80);
-  --primary: oklch(0.72 0.16 45);
-  --primary-foreground: oklch(0.18 0.02 262);
-  --secondary: oklch(0.26 0.015 262);
-  --secondary-foreground: oklch(0.96 0.005 80);
-  --muted: oklch(0.26 0.015 262);
-  --muted-foreground: oklch(0.7 0.015 262);
-  --accent: oklch(0.3 0.03 45);
-  --accent-foreground: oklch(0.93 0.03 60);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.72 0.16 45);
+  /* Deep space navy, holographic gold + cyan */
+  --background: oklch(0.17 0.028 265);
+  --foreground: oklch(0.96 0.008 85);
+  --card: oklch(0.22 0.03 265);
+  --card-foreground: oklch(0.96 0.008 85);
+  --popover: oklch(0.21 0.03 265);
+  --popover-foreground: oklch(0.96 0.008 85);
+  --primary: oklch(0.82 0.13 85);
+  --primary-foreground: oklch(0.2 0.03 265);
+  --secondary: oklch(0.27 0.03 265);
+  --secondary-foreground: oklch(0.96 0.008 85);
+  --muted: oklch(0.27 0.03 265);
+  --muted-foreground: oklch(0.72 0.02 265);
+  --accent: oklch(0.75 0.15 220);
+  --accent-foreground: oklch(0.16 0.03 265);
+  --brand: oklch(0.7 0.16 225);
+  --brand-foreground: oklch(0.16 0.03 265);
+  --destructive: oklch(0.7 0.19 22);
+  --success: oklch(0.72 0.16 158);
+  --warning: oklch(0.82 0.15 78);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.82 0.13 85);
+  --glass-bg: oklch(0.24 0.03 265 / 62%);
+  --glass-border: oklch(1 0 0 / 12%);
+  --grid-line: oklch(0.8 0.08 230 / 8%);
 }
 
 * {
@@ -91,6 +110,7 @@ body {
   min-height: 100%;
   margin: 0;
   background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans);
 }
 
@@ -98,4 +118,93 @@ button,
 input,
 textarea {
   font: inherit;
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-strong {
+    background: var(--card);
+    backdrop-filter: blur(24px) saturate(1.5);
+    -webkit-backdrop-filter: blur(24px) saturate(1.5);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--primary) 40%, transparent),
+      0 0 24px -4px color-mix(in oklab, var(--primary) 55%, transparent);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 24px -6px color-mix(in oklab, var(--accent) 70%, transparent);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grid-bg {
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .animate-float {
+    animation: floaty 6s ease-in-out infinite;
+  }
+  .animate-pulse-ring {
+    animation: pulsering 2.4s ease-out infinite;
+  }
+  .animate-rise {
+    animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .animate-dash {
+    stroke-dasharray: 6 8;
+    animation: dashmove 1.6s linear infinite;
+  }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulsering {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--primary) 55%, transparent); }
+  70% { box-shadow: 0 0 0 12px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dashmove {
+  to { stroke-dashoffset: -28; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-pulse-ring,
+  .animate-rise,
+  .animate-dash {
+    animation: none;
+  }
 }
